@@ -40,5 +40,5 @@ function getWindow(node) {
 
   // TODO: add old-IE fallback logic: http://stackoverflow.com/a/10260692
   var doc = getDocument(node);
-  return doc.defaultView;
+  return doc.defaultView || doc.parentWindow;
 }
